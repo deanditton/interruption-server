@@ -78,7 +78,7 @@ resource "google_cloudbuild_trigger" "cloud_build_trigger" {
   # See: https://github.com/robmorgan/sample-docker-app/blob/master/cloudbuild.yaml#L43
   substitutions = {
     _LOCATION     = var.location
-    _REPOSITORY   =
+    _REPOSITORY   = var.repository_name
     _GCR_REGION   = var.gcr_region
     _SERVICE_NAME = var.notification_service
   }
